@@ -1,4 +1,5 @@
-﻿using Tyuiu.ReshetovaAA.Sprint3.Task2.V4.Lib;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Tyuiu.ReshetovaAA.Sprint3.Task2.V4.Lib;
 
 namespace Tyuiu.ReshetovaAA.Sprint3.Task2.V4.Test
 {
@@ -10,10 +11,13 @@ namespace Tyuiu.ReshetovaAA.Sprint3.Task2.V4.Test
         {
             DataService ds = new DataService();
             int startValue = 1;
-            int stopValue = 10;
+            int stopValue = 9;
 
             double expected = 1;
             int i = 1;
+            double sin1 = Math.Sin(1);
+            double denominator = Math.Pow(sin1, 7);
+
             while (i <= stopValue)
             {
                 if (i % 3 == 0)
@@ -25,7 +29,7 @@ namespace Tyuiu.ReshetovaAA.Sprint3.Task2.V4.Test
                 {
                     break;
                 }
-                expected *= Math.Cos(i) + 0.5; 
+                expected *= Math.Pow(i / denominator, -2);
                 i++;
             }
             expected = Math.Round(expected, 3);
@@ -35,4 +39,4 @@ namespace Tyuiu.ReshetovaAA.Sprint3.Task2.V4.Test
             Assert.AreEqual(expected, result);
         }
     }
-}
+}}

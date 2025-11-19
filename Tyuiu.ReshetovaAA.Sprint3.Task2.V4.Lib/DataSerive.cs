@@ -7,23 +7,25 @@ namespace Tyuiu.ReshetovaAA.Sprint3.Task2.V4.Lib
     {
         public double GetMultiplySeries(int startValue, int stopValue)
         {
-            double multiply = 1; 
+            double multiply = 1;
             int i = startValue;
+            double sin1 = Math.Sin(1);
+            double denominator = Math.Pow(sin1, 7);
 
             while (i <= stopValue)
             {
-                if (i % 3 == 0) 
+                if (i % 3 == 0)
                 {
                     i++;
                     continue;
                 }
 
-                if (i == 8) 
+                if (i == 8)
                 {
                     break;
                 }
 
-                multiply *= Math.Cos(i) + 0.5;
+                multiply *= Math.Pow(i / denominator, -2);
                 i++;
             }
 

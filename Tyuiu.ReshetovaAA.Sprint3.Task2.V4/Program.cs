@@ -18,18 +18,19 @@ namespace Tyuiu.ReshetovaAA.Sprint3.Task2.V4
             Console.WriteLine("* Выполнила: Решетова Арина Алексеевна | СМАРТб-25-1                      *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу, используя цикл while, которая вычисляет сумму ряда  *");
+            Console.WriteLine("* Написать программу, используя цикл while, которая вычисляет произведение*");
+            Console.WriteLine("* ряда по формуле: p = ∏(k=1 до 9) (k/sin(1)^7)^(-2)                     *");
             Console.WriteLine("* с использованием операторов continue и break                            *");
             Console.WriteLine("***************************************************************************");
 
             int startValue = 1;
-            int stopValue = 10;
+            int stopValue = 9;
 
             double result = ds.GetMultiplySeries(startValue, stopValue);
 
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine($"Сумма ряда = {result}");
+            Console.WriteLine($"Произведение ряда = {result}");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Программа завершена. Нажмите любую клавишу для выхода.                 *");
             Console.WriteLine("***************************************************************************");
