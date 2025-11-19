@@ -1,7 +1,7 @@
 ﻿using System;
 using Tyuiu.ReshetovaAA.Sprint3.Task3.V18.Lib;
 
-namespace Tyuiu.ReshetovaAA.Sprint3.Task6.V18
+namespace Tyuiu.ReshetovaAA.Sprint3.Task3.V18
 {
     internal class Program
     {
@@ -13,7 +13,7 @@ namespace Tyuiu.ReshetovaAA.Sprint3.Task6.V18
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #3                                                               *");
             Console.WriteLine("* Тема: Обработка строковых данных                                       *");
-            Console.WriteLine("* Задание #6                                                              *");
+            Console.WriteLine("* Задание #3                                                              *");
             Console.WriteLine("* Вариант #18                                                             *");
             Console.WriteLine("* Выполнила: Решетова Арина Алексеевна | СМАРТб-25-1                      *");
             Console.WriteLine("***************************************************************************");
