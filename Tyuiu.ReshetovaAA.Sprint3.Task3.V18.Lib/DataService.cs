@@ -4,7 +4,7 @@ using System;
 
 namespace Tyuiu.ReshetovaAA.Sprint3.Task3.V18.Lib
 {
-    public class DataService
+    public class DataService : ISprint3Task3V18
     {
         public string ReplaceNumOnChar(string value, char item)
         {
