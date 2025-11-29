@@ -8,21 +8,35 @@ namespace Tyuiu.ReshetovaAA.Sprint3.Task7.V11.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMassFunction()
+        public void GetMassFunction()
         {
             DataService ds = new DataService();
 
-            int start = -5;
-            int stop = 5;
+            int startValue = -5;
+            int stopValue = 5;
 
-            double[] arr = ds.GetMassFunction(start, stop);
+            int len = stopValue - startValue + 1;
 
-            Assert.AreEqual(11, arr.Length);
+            double[] valueWaitArray;
+            valueWaitArray = new double[len];
 
-            double expected1 = Math.Round(Math.Cos(-5) + Math.Sin(-5) / (2 - 2 * (-5)) - 4 * (-5), 2);
-            Assert.AreEqual(expected1, arr[0]);
+            valueWaitArray[0] = 20.36;
+            valueWaitArray[1] = 15.42;
+            valueWaitArray[2] = 10.99;
+            valueWaitArray[3] = 7.43;
+            valueWaitArray[4] = 4.33;
+            valueWaitArray[5] = 1.00;
+            valueWaitArray[6] = 0.00;
+            valueWaitArray[7] = -8.87;
+            valueWaitArray[8] = -13.03;
+            valueWaitArray[9] = -16.53;
+            valueWaitArray[10] = -19.60;
 
-            Assert.AreEqual(0, arr[6]);
+            double[] res;
+            res = new double[len];
+            res = ds.GetMassFunction(startValue, stopValue);
+            CollectionAssert.AreEqual(valueWaitArray, res);
+
         }
     }
 }

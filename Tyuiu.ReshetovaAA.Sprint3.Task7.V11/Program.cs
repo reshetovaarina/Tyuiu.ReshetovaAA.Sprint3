@@ -21,21 +21,32 @@ namespace Tyuiu.ReshetovaAA.Sprint3.Task7.V11
             Console.WriteLine("* Табулирование функции на диапазоне [-5;5]                               *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("***************************************************************************");
+            int startValue = -5;
+            int stopValue = 5;
 
-            int start = -5;
-            int stop = 5;
+            Console.WriteLine("Старт шага = " + startValue);
+            Console.WriteLine("Конец шага = " + stopValue);
 
-            double[] result = ds.GetMassFunction(start, stop);
+            int len = ds.GetMassFunction(startValue, stopValue).Length;
 
-            Console.WriteLine("РЕЗУЛЬТАТ:");
+            double[] valueArray;
+            valueArray = new double[len];
 
-            int x = start;
-            foreach (double v in result)
+            valueArray = ds.GetMassFunction(startValue, stopValue);
+
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+            Console.WriteLine("***************************************************************************");
+
+            Console.WriteLine("+------------+--------------+");
+            Console.WriteLine("|     x      |     f(x)     |");
+            Console.WriteLine("+------------+--------------+");
+            for (int i = 0; i < len; i++)
             {
-                Console.WriteLine("x =" + x +  "→  F(x) = " + v);
-                x++;
+                Console.WriteLine("|{0, 6:d}      |   {1, 6:f2}     |", startValue, valueArray[i]);
+                startValue++;
             }
-
+            Console.WriteLine("+------------+--------------+");
             Console.ReadKey();
         }
     }

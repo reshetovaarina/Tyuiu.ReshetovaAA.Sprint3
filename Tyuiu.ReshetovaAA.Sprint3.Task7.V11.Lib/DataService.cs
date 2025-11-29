@@ -7,31 +7,32 @@ namespace Tyuiu.ReshetovaAA.Sprint3.Task7.V11.Lib
     {
         public double[] GetMassFunction(int startValue, int stopValue)
         {
-            int size = stopValue - startValue + 1;
-            double[] result = new double[size];
+            double[] valueArray;
+            int len = (stopValue - startValue) + 1;
+            valueArray = new double[len];
 
-            int index = 0;
+            int count = 0;
 
             for (int x = startValue; x <= stopValue; x++)
             {
                 double denominator = 2 - 2 * x;
 
-                double value;
+                double y;
 
                 if (denominator == 0)
                 {
-                    value = 0; 
+                    y = 0;
                 }
                 else
                 {
-                    value = Math.Cos(x) + (Math.Sin(x) / denominator) - 4 * x;
+                    y = Math.Round(Math.Cos(x) + (Math.Sin(x) / denominator) - (4 * x), 2);
                 }
 
-                result[index] = Math.Round(value, 2);
-                index++;
+                valueArray[count] = y;
+                count++;
             }
 
-            return result;
+            return valueArray;
         }
     }
 }
